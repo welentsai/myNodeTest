@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/welentsai/myNodeTest/issues"
   },
-  "homepage": "https://github.com/welentsai/myNodeTest#readme"
+  "homepage": "https://github.com/welentsai/myNodeTest#readme",
+  "dependencies": {
+    "node-cron": "^1.2.1"
+  }
 }

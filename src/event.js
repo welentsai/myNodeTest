@@ -22,8 +22,4 @@ myEmitter.on('event2', (a,b) => {
   // Prints: a b {}
 });
 
-
-
-
-
 myEmitter.emit('event', 'aa', 'bb');
