@@ -1,6 +1,4 @@
 
-console.log(async function () {});
-
 function mysleep(para) {
   return new Promise(function(resolve, reject) {
     setTimeout(function() {
@@ -18,12 +16,17 @@ async function f1() {
   try {
     let x = await mysleep(5);
     console.log("async call with await : " + x); // 4
+    for(var i in [1, 2, 3, 4, 5]) {
+      let res = await mysleep(i);
+      console.log(res);
+    }
     let z = await Promise.reject(30); // 若 Promise 被 reject，則丟出 reject 後的異常值
   } catch(e) {
     console.log("Catched Error !! : " + e); // 30
   }
 };
 
+console.log(async function () {});
 
 f1();
 // mysleep() 會立即被執行, async function 為 non-blocking
